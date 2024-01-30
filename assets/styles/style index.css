@@ -1,0 +1,88 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #87CEEB, #3498db, #6a5acd, #2c3e50);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .login-container {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    width: 300px;
+    max-width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  h2 {
+    color: #000;
+  }
+  
+  .input-container {
+    background-color: #87CEEB; /* Azul celeste */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .input-wrapper {
+    position: relative;
+  }
+  
+  span.placeholder {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #ccc; /* Color de texto gris claro para el texto de marcador de posición */
+    pointer-events: none; /* Evita que el marcador de posición interfiera con la entrada de texto */
+    transition: opacity 0.3s ease;
+  }
+  
+  input {
+    width: calc(100% - 32px);
+    padding: 8px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    background: transparent;
+    color: #fff;
+  }
+  
+  input:focus + span.placeholder,
+  input:not(:placeholder-shown) + span.placeholder {
+    opacity: 0; /* Hace que el texto del marcador de posición desaparezca cuando el campo está enfocado o tiene contenido */
+  }
+  
+  input[type="password"] {
+    letter-spacing: 5px; /* Aumenta el espaciado entre los caracteres para ocultar el texto de la contraseña */
+  }
+  
+  input[type="submit"] {
+    background-color: #2c3e50; /* Azul oscuro */
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #34495e; /* Azul oscuro al pasar el mouse */
+  }
+  
+  .forgot-password {
+    margin-top: 10px;
+    color: #555;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
