@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const createContactLink = document.getElementById("create-contact-link");
 
-  // Agrega un evento de clic al enlace
   createContactLink.addEventListener("click", function (event) {
     event.preventDefault();
 
@@ -12,3 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+function showContactDetails(contactId) {
+  const detailsPageUrl = `path/to/contact_details.html?contactId=${contactId}`;
+  window.location.href = detailsPageUrl;
+}
