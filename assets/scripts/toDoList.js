@@ -3,11 +3,11 @@ let tasks = [];
 function renderTasks() {
   const taskList = document.getElementById('taskList');
   taskList.innerHTML = '';
-  
+
   tasks.forEach((task, index) => {
     const li = document.createElement('li');
     li.innerHTML = `<span><strong>(${task.priority})</strong></span> <span id="taskName_${index}" contenteditable="true">${task.name}</span> 
-                <a href="pagina_editar.html?index=${index}"><img class="edit-button" src="../media/editar.png" alt="Editar"></a>
+                <a href="javascript:void(0);" onclick="openEditForm(${index})"><img class="edit-button" src="../media/editar.png" alt="Editar"></a>
                 <img class="delete-button" onclick="deleteTask(${index})" src="../media/borrar.png" alt="Eliminar">`;
     taskList.appendChild(li);
   });
@@ -32,9 +32,9 @@ function deleteTask(index) {
   renderTasks();
 }
 
-function editTask(index) {
-  const newName = prompt("¿Cuál es el nombre de su tarea?");
-  const newPriority = prompt("Ingresar la prioridad de su tarea");
+function openEditForm(index) {
+  const newName = prompt("¿Cuál es el nuevo nombre de su tarea?");
+  const newPriority = prompt("Ingresar la nueva prioridad de su tarea");
 
   if (newName !== null && newPriority !== null) {
     tasks[index].name = newName.trim();
@@ -43,6 +43,6 @@ function editTask(index) {
   }
 }
 
-window.onload = function() {
+window.onload = function () {
   renderTasks();
 };
