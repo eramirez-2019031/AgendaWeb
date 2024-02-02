@@ -53,14 +53,14 @@ li strong a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 20px 20px 1000px; 
-  background-color: rgba(51, 51, 51, 0); 
-  border-bottom: 1px solid rgba(255, 255, 255, 0); 
+  padding: 20px;
+  background-color: rgba(51, 51, 51, 0);
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  transition: border-bottom 0.3s ease; 
+  transition: border-bottom 0.3s ease;
 }
 
 .logo-link {
@@ -69,17 +69,30 @@ li strong a:hover {
 }
 
 .logo-image {
-  width: 100px; 
-  height: 100PX;
+  width: 100px;
+  height: 100px;
   cursor: pointer;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
 }
 
 .logo-link:hover .logo-image {
-  transform: scale(0.9); 
+  transform: scale(0.9);
+}
+
+.new-logo {
+  display: flex;
+  align-items: center;
 }
 
 .contacts-container {
   margin-top: 80px;
   padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  width: 300px;
+  max-width: 100%;
+  text-align: center;
+  box-sizing: border-box;
 }
