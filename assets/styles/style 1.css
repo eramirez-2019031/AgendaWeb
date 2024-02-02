@@ -96,3 +96,13 @@ li strong a:hover {
   text-align: center;
   box-sizing: border-box;
 }
+
+.tarea {
+  width: 70px; 
+  height: 70px;
+  display: block;
+  margin: 0 auto; 
+}
+
+
+
